@@ -13,11 +13,10 @@ DOCKER_IMAGE=express42/otus-homeworks
 # fi
 pwd
 echo HOMEWORK:$BRANCH
-mkdir -p linting && cd linting
-pwd
+mkdir -p linting
 
 echo "Clone repository with tests"
-git clone -b linting-tests --single-branch $REPO
+git clone -b linting-tests --single-branch $REPO linting/
 
 if [ -f $HOMEWORK_RUN ]; then
 	echo "Run tests"
