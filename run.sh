@@ -18,6 +18,7 @@ mkdir -p linting
 echo "Clone repository with tests"
 git clone -b linting-tests --single-branch $REPO linting/
 
+pwd
 
 if [ -f $HOMEWORK_RUN ]; then
 	echo "Run tests"
