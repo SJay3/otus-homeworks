@@ -15,10 +15,12 @@ echo `pwd`
 ls -la
 echo HOMEWORK:$BRANCH
 mkdir -p linting && cd linting
+pwd
 
 echo "Clone repository with tests"
 git clone $REPO
 
+ls -la
 if [ -f $HOMEWORK_RUN ]; then
 	echo "Run tests"
 	# Prepare network & run container
