@@ -2,4 +2,4 @@
 set -e
 
 # Run InSpec
-inspec exec otus-homeworks/tests
+inspec exec linting/otus-homeworks/tests
