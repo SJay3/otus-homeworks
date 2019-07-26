@@ -11,8 +11,7 @@ DOCKER_IMAGE=express42/otus-homeworks
 # 	echo "We don't have tests for master branch"
 # 	exit 0
 # fi
-echo `pwd`
-ls -la
+pwd
 echo HOMEWORK:$BRANCH
 mkdir -p linting && cd linting
 pwd
@@ -20,7 +19,6 @@ pwd
 echo "Clone repository with tests"
 git clone -b linting-tests --single-branch $REPO
 
-ls -la
 if [ -f $HOMEWORK_RUN ]; then
 	echo "Run tests"
 	# Prepare network & run container
