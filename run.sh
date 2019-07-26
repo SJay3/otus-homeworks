@@ -28,7 +28,7 @@ if [ -f $HOMEWORK_RUN ]; then
 		--device /dev/net/tun --name hw-test-lint --network hw-test-lint-net $DOCKER_IMAGE
 	# Show versions & run tests
 	docker exec hw-test-lint bash -c 'echo -=Get versions=-; ansible --version; ansible-lint --version; packer version; terraform version; tflint --version; docker version; docker-compose --version'
-	docker exec hw-test-lint bash -c 'pwd; ls -la'
+	docker exec hw-test-lint bash -c 'pwd; id'
 	docker exec -e USER=appuser -e BRANCH=$BRANCH hw-test-lint $HOMEWORK_RUN
 
 	# ssh -i id_rsa_test -p 33433 root@localhost "cd /srv && BRANCH=$BRANCH $HOMEWORK_RUN"
